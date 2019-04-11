@@ -21,7 +21,7 @@ RUN chmod g+rw /home && \
     mkdir -p /home/project && \
     chown -R theia:theia /home/theia && \
     chown -R theia:theia /home/project;
-WORKDIR /home/theia
+WORKDIR /home/theia/browser-ide
 USER theia
 RUN git clone https://60f7787ae4074c4dc5a69d6608f87652dc21e6bd:x-oauth-basic@github.com/okrits/abas-docker browser-ide
 
