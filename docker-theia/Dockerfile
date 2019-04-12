@@ -1,12 +1,9 @@
 #Theia-Image
 
-#ARG NODE_VERSION=10
-#FROM ibmcom/ibmjava:8-sdk as java-base
-
-#FROM node:$NODE_VERSION
+ARG NODE_VERSION=10
 FROM ibmcom/ibmjava:8-sdk as java-base
 
-FROM ibmcom/ibmnode:8
+FROM node:$NODE_VERSION
 COPY --from=java-base /opt/ibm/java /opt/ibm/java
 
 ENV JAVA_HOME=/opt/ibm/java/jre \
@@ -18,7 +15,7 @@ RUN apt-get update && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
   apt-get update && apt-get install -y yarn && \
   rm -rf /var/lib/apt/lists/*
-# See : https://github.com/theia-ide/theia-apps/issues/34
+# User account
 RUN adduser --disabled-password --gecos '' theia
 RUN chmod g+rw /home && \
     mkdir -p /home/project && \
