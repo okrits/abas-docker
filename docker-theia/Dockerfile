@@ -32,4 +32,4 @@ RUN yarn --cache-folder ./ycache && rm -rf ./ycache
 RUN yarn theia build
 EXPOSE 3000
 ENV SHELL /bin/bash
-ENTRYPOINT [ "yarn", "theia", "start", "/home/theia/browser-ide"]
+ENTRYPOINT [ "yarn", "theia", "start", "/home/theia/browser-ide" ]
