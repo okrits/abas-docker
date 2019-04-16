@@ -1,3 +1,3 @@
 # Theia IDE
 
-Trying to build a Theia IDE docker image in AWS EC2 instance
+Running Theia IDE within docker container in AWS EC2 instance
