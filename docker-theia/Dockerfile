@@ -30,6 +30,6 @@ ADD $version.package.json ./package.json
 ARG GITHUB_TOKEN
 RUN yarn --cache-folder ./ycache && rm -rf ./ycache
 RUN yarn theia build
-EXPOSE 3000
 ENV SHELL /bin/bash
-ENTRYPOINT [ "yarn", "theia", "start", "/home/theia/browser-ide" ]
+ENTRYPOINT [ "yarn", "theia", "start", "/home/theia/browser-ide", "--hostname=0.0.0.0" ]
+EXPOSE 3000
