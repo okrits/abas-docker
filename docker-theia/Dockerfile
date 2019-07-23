@@ -1,5 +1,5 @@
 #Theia-Image
-#Test
+#Neuer Test
 
 ARG NODE_VERSION=10
 FROM ibmcom/ibmjava:8-sdk as java-base
