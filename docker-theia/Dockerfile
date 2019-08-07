@@ -1,5 +1,6 @@
 #Theia-Image
 #local Test
+#TEST
 
 FROM ibmcom/ibmjava:8-sdk as java-base
 
